@@ -1,0 +1,102 @@
+[
+  {
+    "model": "inventario.articulo",
+    "pk": 1,
+    "fields": {
+      "codigoArticulo": "ART0001",
+      "nombreArticulo": "Detergente",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 3
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 2,
+    "fields": {
+      "codigoArticulo": "ART0002",
+      "nombreArticulo": "Comida enlatada",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 4
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 3,
+    "fields": {
+      "codigoArticulo": "ART0003",
+      "nombreArticulo": "Jabón",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 5
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 4,
+    "fields": {
+      "codigoArticulo": "ART0004",
+      "nombreArticulo": "Shampoo",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 1
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 5,
+    "fields": {
+      "codigoArticulo": "ART0005",
+      "nombreArticulo": "Gaseosa",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 6
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 6,
+    "fields": {
+      "codigoArticulo": "ART0006",
+      "nombreArticulo": "Cereal",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 7
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 7,
+    "fields": {
+      "codigoArticulo": "ART0007",
+      "nombreArticulo": "Arroz",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 8
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 8,
+    "fields": {
+      "codigoArticulo": "ART0008",
+      "nombreArticulo": "Avena",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 4
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 9,
+    "fields": {
+      "codigoArticulo": "ART0009",
+      "nombreArticulo": "Pan",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 3
+    }
+  },
+  {
+    "model": "inventario.articulo",
+    "pk": 10,
+    "fields": {
+      "codigoArticulo": "ART00010",
+      "nombreArticulo": "Mantequilla",
+      "descripcionArticulo": "Descripción",
+      "cantidadArticulo": 1
+    }
+  }
+]
