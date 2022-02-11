@@ -7,7 +7,3 @@ class Articulo(models.Model):
     nombreArticulo=models.CharField(max_length=50)
     descripcionArticulo=models.CharField(max_length=200)
     cantidadArticulo=models.IntegerField()
-
-def sku(self):
-      codigo_articulo = self.codigoArticulo()
-      return f'{codigo_articulo}'

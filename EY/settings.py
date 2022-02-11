@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'inventario.apps.InventarioConfig',
+    'crispy_forms',
+    'storages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,3 +121,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = 'articulo-list'
+
+import os
+if 'ON_HEROKU' in os.environ:
+    import django_heroku
+    django_heroku.settings(locals())
+
+if 'ON_HEROKU' in os.environ:
+    ... 
+    # Django Storages
+    DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+    DROPBOX_OAUTH2_TOKEN = 'sl.BB2roBEYOLbaAsszqquyPl0erXuuU8j1__fEYS85zCkHFVM1YvgRVZKY1UoMpgH9cF21XGtvfxM9IaDnUx3gtt3g3u_cOvt5tUPJEwk08H8tGWD-Ymq5iwsQO1cLTzA8PSFP0UM'

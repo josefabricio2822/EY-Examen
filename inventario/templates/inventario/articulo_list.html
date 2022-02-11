@@ -1,25 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> LinioExp </title>
-  </head>
-  <body>
-    <h1> LinioExp </h1>
-    <hr>
-    <h3> Articulos </h3>
-    <ul>
-      {% for articulo in object_list %}
-        <li>
-            {{ articulo.nombreArticulo }} - {{ articulo.cantidadArticulo }}
-        </li>
-      {% empty %}
-        <li>Aun no hay productos disponibles.</li>
-      {% endfor %}
-    </ul>
-    <hr>
-    <ul>
-      <li> <a href="{% url 'home' %}">Inicio</a> </li>
-    </ul>
-  </body>
-</html>
+{% extends "inventario/base.html" %}
+{% block content %}
+    <h2 class="my-4 text-center"> Articulos en inventario </h2>
+    <table class="table table-hover">
+      <thead class="table-light">
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Cod. Art.</th>
+            <th scope="col">Nombre Art.</th>
+            <th scope="col">Desc. Art.</th>
+            <th scope="col">Cant. Art.</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for articulo in object_list %}
+          <tr>
+            <th scope="row"> {{ forloop.counter }} </th>
+            <td> {{ articulo.codigoArticulo }} </td>
+            <td>{{ articulo.nombreArticulo }}</td>
+            <td>{{ articulo.descripcionArticulo }}</td>
+            <td>{{ articulo.cantidadArticulo }}</td>
+            <td> <a href="{% url 'articulo-update' articulo.pk %}"><img width="30" height="30" class="mr-3" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-edit-miscellaneous-kiranshastry-solid-kiranshastry.png"/></a> 
+                 <a href="{% url 'articulo-delete' articulo.pk %}"><img width="30" height="30" class="" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-delete-miscellaneous-kiranshastry-solid-kiranshastry.png"/></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+{% endblock content %}

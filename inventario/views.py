@@ -1,14 +1,23 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from .models import Articulo
+from django.urls import reverse
+
 # Create your views here.
-
-def home(request):
-  return HttpResponse("Hola Mundo. Te encuentras en la página de inicio del EY Express")
-
 class ArticuloListView(ListView):
     model = Articulo
 
-class ArticuloDetailView(DetailView):
+class ArticuloCreateView(CreateView):
     model = Articulo
+    fields = ['codigoArticulo', 'nombreArticulo','descripcionArticulo','cantidadArticulo']
+    success_url = '/'
+
+class ArticuloUpdateView(UpdateView):
+    model = Articulo
+    fields = ['codigoArticulo', 'nombreArticulo','descripcionArticulo','cantidadArticulo']
+    success_url = '/'
+    def get_absolute_url(self):
+        return reverse('articulo-list')
+
+class ArticuloDeleteView(DeleteView):
+    model = Articulo
+    success_url = '/'

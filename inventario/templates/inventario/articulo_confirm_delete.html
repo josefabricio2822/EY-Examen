@@ -1,0 +1,15 @@
+{% extends "inventario/base.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <h2 class="mt-4">¿Estas seguro de eliminar "{{ object.nombreArticulo }} ( {{ object.codigoArticulo }} )"?</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Si, Eliminar</button>
+                <a class="btn btn-outline-secondary" href="{% url 'articulo-list' %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
